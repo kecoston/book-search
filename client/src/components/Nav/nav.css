@@ -1,0 +1,10 @@
+nav.navbar.navbar-default {
+    margin-bottom: 0;
+    
+  }
+  
+  .navbar-light .navbar-brand {
+    color: lightgray;
+    font-size: medium;
+}
+

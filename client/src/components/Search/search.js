@@ -10,7 +10,7 @@ function Search(props) {
                 <input 
                     type="search" class="form-control" id="searchInput"></input>
 
-                    <button type="submit" className="btn btn-primary" onClick={ () => props.search(document.getElementById("searchInput").value)}>Submit</button>
+                    <button type="submit" className="btn btn-secondary" onClick={ () => props.search(document.getElementById("searchInput").value)}>Submit</button>
             </div>
 
         </div>

@@ -1,0 +1,8 @@
+div.card.mb-3 {
+    display: flex;
+    max-width: 800px;
+}
+
+.btn {
+   margin: 10px;
+}
