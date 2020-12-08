@@ -1,0 +1,19 @@
+.container-fluid {
+    height: 500px;
+   background-color: teal;
+   font-family: 'Playfair Display', serif;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1 {
+    padding-top: 200px;    
+    color: white;
+}
+
+h3 {
+    color: white;
+font-style: italic;
+}
+

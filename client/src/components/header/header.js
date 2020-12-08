@@ -1,11 +1,10 @@
 import React from 'react'
-
+import "./header.css"
 function Header () {
     return (
-        <div className="Jumbotron">
+        <div className="container-fluid">
             <h1>React Google Book Search</h1>
             <h3>Search for and Save Books of Interest</h3>
-            <img src="/public/images/book-search-image.jpg" alt="Book-Search" />
         </div>
     )
 }
