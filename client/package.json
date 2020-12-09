@@ -1,7 +1,7 @@
 {
-  "name": "mern",
+  "name": "book-search",
   "version": "0.1.0",
-  "description": "Mern Demo",
+  "description": "book-search",
   "private": true,
   "proxy": "http://localhost:3001/",
   "dependencies": {
