@@ -1,7 +1,7 @@
 import React from 'react';
 
 function Book(props) {
-    const {title, authors, image, link, description, deleteBook} = props
+    const {title, authors, image, link, description, deleteGoogleBook} = props
     return (
         <div className="card mb-3">
 
@@ -20,7 +20,7 @@ function Book(props) {
                     Learn More
             </button>
             <button
-                onCLick={deleteBook.bind(this, props)}
+                onCLick={deleteGoogleBook.bind(this, props)}
                 type="button"
                 className="btn btn-secondary">
                     Delete

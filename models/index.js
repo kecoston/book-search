@@ -1,4 +1,4 @@
 module.exports = {
 
-    Books: require("./bookSchema")
+    GoogleBooks: require("./book")
 }

@@ -28,7 +28,7 @@ class Book extends Component {
     }
     
     handleSaveButton = () => {
-            this.props.saveBook(this.props)
+            this.props.saveGoogleBook(this.props)
             this.changeText();
      }
 
@@ -39,9 +39,11 @@ class Book extends Component {
             return (
 
                 <div className="card mb-3">
-
-                    <img src={this.props.image} className="card-img-top" alt={this.props.title}></img>
-
+                    <div className="row g-0">
+                    <div className="col-md-4">
+                    <img src={this.props.image} className="img-thumbnail" alt={this.props.title}></img>
+                    </div>
+                    <div className="col-md-8">
                     <div className="card-body">
                         <h5 className="card-title">{this.props.title}</h5>
                         <p className="card-text">{this.props.description}</p>
@@ -60,7 +62,8 @@ class Book extends Component {
                             className="btn btn-secondary">
                                 {this.state.text}
                         </button>
-
+                        </div>
+                    </div>
                     </div>
 
                 </div>

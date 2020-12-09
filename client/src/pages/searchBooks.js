@@ -6,7 +6,6 @@ import Nav from "../components/Nav/nav"
 import API from "../utils/API"
 import BookList from "../components/BookList/bookList"
 
-
 class SearchBooks extends Component {
 
     state = {
@@ -14,11 +13,13 @@ class SearchBooks extends Component {
         search: ""
     };
 
+    
     searchBooks = () => {
-        API.Books(this.state.search)
+        console.log("the state is:", this.state.search)
+        API.googleBooks(this.state.search)
             .then(res => {
                 this.setState({
-                books: res.data.book,
+                books: res.data.items,
                 search: ""
             })})
             .catch(err => console.log(err));
@@ -39,7 +40,7 @@ class SearchBooks extends Component {
     };
 
 
-    saveBook = selectedBook => {
+    saveGoogleBook = selectedBook => {
         API.saveBook({
             id: selectedBook.id,
             title: selectedBook.title,
@@ -61,8 +62,8 @@ class SearchBooks extends Component {
 
             <div>
             <Search
-                      name="bookSearch"
-                      value={this.search}
+                      name="search"
+                      value={this.state.search}
                       onChange={this.handleInputChange}
                       placeholder="Search For a Books"
                     />
@@ -78,7 +79,7 @@ class SearchBooks extends Component {
             {this.state.books.length ? (
             <BookList
             bookState={this.state.books}
-            saveBook={this.saveBook}
+            saveBook={this.saveGoogleBook}
             />
             ) : (
                 <div>

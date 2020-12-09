@@ -25,9 +25,9 @@ const bookSchema = new Schema ({
     link:{
         type: String,
         required: true
-    },
+    }
 })
 
-const Books = mongoose.model("Book", bookSchema);
+const GoogleBooks = mongoose.model("GoogleBook", bookSchema);
 
-module.exports = Books;
+module.exports = GoogleBooks;

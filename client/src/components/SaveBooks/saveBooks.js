@@ -16,7 +16,7 @@ class BookList extends Component {
             authors={book.authors && book.authors.length > 1 ? book.authors.join(", ") : book.authors}
             image={book.image ? book.image : "https://secocms.cpa.texas.gov/sca-dev-kilimanjaro/img/no_image_available.jpeg"}
             description={book.description}
-            deleteBook={this.props.deleteBook}
+            deleteBook={this.props.deleteGoogleBook}
             />
         ))
         )
