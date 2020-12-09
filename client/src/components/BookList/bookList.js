@@ -19,7 +19,7 @@ class BookList extends Component {
             authors={book.volumeInfo.authors && book.volumeInfo.authors.length > 1 ? book.volumeInfo.authors.join(", ") : book.volumeInfo.authors}
             image={book.volumeInfo.imageLinks ? book.volumeInfo.imageLinks.thumbnail : "https://secocms.cpa.texas.gov/sca-dev-kilimanjaro/img/no_image_available.jpeg"}
             description={book.volumeInfo.description}
-            saveBook={this.props.saveBook}
+            saveBook={this.props.saveGoogleBook}
             />
         ))
         )

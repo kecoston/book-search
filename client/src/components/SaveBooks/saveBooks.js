@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import SavedBook from "../SavedBook/savedBook";
+import Book from "../SavedBook/savedBook";
 
 class BookList extends Component {
 
@@ -8,7 +8,7 @@ class BookList extends Component {
         console.log("Props", this.props.bookState)
         return (
             this.props.bookState.map((book) => (
-            <SavedBook
+            <Book
             key={book._id}
             id={book._id}
             title={book.title}

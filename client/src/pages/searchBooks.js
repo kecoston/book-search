@@ -15,7 +15,7 @@ class SearchBooks extends Component {
 
     
     searchBooks = () => {
-        console.log("the state is:", this.state.search)
+        console.log(this.state.search)
         API.googleBooks(this.state.search)
             .then(res => {
                 this.setState({
@@ -40,14 +40,15 @@ class SearchBooks extends Component {
     };
 
 
-    saveGoogleBook = selectedBook => {
+    saveGoogleBook = currentBook => {
+        console.log(currentBook)
         API.saveBook({
-            id: selectedBook.id,
-            title: selectedBook.title,
-            authors: selectedBook.authors,
-            description: selectedBook.description,
-            image: selectedBook.image,
-            link: selectedBook.link
+            id: currentBook.id,
+            title: currentBook.title,
+            authors: currentBook.authors,
+            description: currentBook.description,
+            image: currentBook.image,
+            link: currentBook.link
         })
         .then(res => console.log("Success"))
         .catch(err => console.log("Error"))

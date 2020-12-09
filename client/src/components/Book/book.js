@@ -7,30 +7,34 @@ class Book extends Component {
         saved: false,
         text: "Save"
     }
-
+    
     componentDidMount = () => {
         this.setState({
             saved: true
         })
-        console.log("Saved")
     }
 
-    changeText = () => {
+    getStyle = () => {
         if (this.state.text === "Save") {
             this.setState({
+
                 text: "Saved"
             })
-        } else {
+        }
+        else {
             this.setState({
                 text: "Save"
             })
-        }
+        }   
     }
-    
-    handleSaveButton = () => {
-            this.props.saveGoogleBook(this.props)
-            this.changeText();
-     }
+
+
+
+    saveFunction = () => {
+
+        this.props.saveGoogleBook(this.props)
+        this.getStyle();
+    }
 
         render() {
 
@@ -51,15 +55,13 @@ class Book extends Component {
 
                         <a href={this.props.link}
                             target="_black"
-                            rel="noopener noreferrer"
                             type="button"
                             className="btn btn-secondary">
                                 Learn More
                         </a>
                         <button
-                            onCLick={this.handleSaveButton}
-                            type="button"
-                            className="btn btn-secondary">
+                                onClick={this.saveFunction}
+                                className="btn btn-secondary">
                                 {this.state.text}
                         </button>
                         </div>
