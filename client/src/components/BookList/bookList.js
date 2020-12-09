@@ -1,6 +1,6 @@
 
 import React, { Component } from 'react'
-import Book from "../Book";
+import Book from "../Book/book";
 
 class BookList extends Component {
 

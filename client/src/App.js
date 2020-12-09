@@ -1,26 +1,25 @@
-import React, { useState } from "react";
+
+import React, { Component } from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import SearchBooks from "./pages/searchBooks";
 import "./App.css";
-import Header from "./components/Header/header"
-import Search from "./components/Search/search"
-import Book from "./components/Book/book"
-import Nav from "./components/Nav/nav"
-
-function App () {
-
-  return (
-    <div>
  
-    <Header/>
-    <Nav />
-    <Search  
-        search={this.searchInput}
-    />
-    <Book/>
-    
-    </div>
-  );
 
+
+class App extends Component {
+
+
+  render() {
+    return (
+      <Router>
+      <div>
+        <Switch>
+          <Route exact path="/" component={SearchBooks} />
+        </Switch>
+      </div>
+      </Router>
+    );
+  }
 }
-
 
 export default App;

@@ -1,6 +1,6 @@
 import React from 'react';
 
-function SavedBook(props) {
+function Book(props) {
     const {title, authors, image, link, description, deleteBook} = props
     return (
         <div className="card mb-3">
@@ -20,7 +20,7 @@ function SavedBook(props) {
                     Learn More
             </button>
             <button
-                onCLick={deleteBook.bind(this.props)}
+                onCLick={deleteBook.bind(this, props)}
                 type="button"
                 className="btn btn-secondary">
                     Delete
@@ -32,4 +32,4 @@ function SavedBook(props) {
     )
 }
 
-export default ResultListItem;
+export default Book;

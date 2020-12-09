@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import SavedBook from "../SavedBook/savedBook";
 
-class ResultList extends Component {
+class BookList extends Component {
 
 
     render() {
@@ -16,7 +16,7 @@ class ResultList extends Component {
             authors={book.authors && book.authors.length > 1 ? book.authors.join(", ") : book.authors}
             image={book.image ? book.image : "https://secocms.cpa.texas.gov/sca-dev-kilimanjaro/img/no_image_available.jpeg"}
             description={book.description}
-            deleteGoogleBook={this.props.deleteBook}
+            deleteBook={this.props.deleteBook}
             />
         ))
         )
@@ -24,4 +24,4 @@ class ResultList extends Component {
     }
 }
 
-export default ResultList
+export default BookList

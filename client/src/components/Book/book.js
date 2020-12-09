@@ -1,5 +1,4 @@
-import React from 'react'
-import API from "../../utils/API"
+import React, { Component } from 'react'
 import "./book.css"
 
 class Book extends Component {
@@ -10,7 +9,7 @@ class Book extends Component {
     }
 
     componentDidMount = () => {
-        this.setSate({
+        this.setState({
             saved: true
         })
         console.log("Saved")
@@ -30,7 +29,7 @@ class Book extends Component {
     
     handleSaveButton = () => {
             this.props.saveBook(this.props)
-            this.changeText
+            this.changeText();
      }
 
         render() {
@@ -41,25 +40,25 @@ class Book extends Component {
 
                 <div className="card mb-3">
 
-                    <img src={this.props.image} className="card-img-top" alt="..."></img>
+                    <img src={this.props.image} className="card-img-top" alt={this.props.title}></img>
 
                     <div className="card-body">
                         <h5 className="card-title">{this.props.title}</h5>
                         <p className="card-text">{this.props.description}</p>
                         <p className="card-text">Author: {this.props.author}</p>
 
-                        <button
-                            onCLick={this.props.link}
+                        <a href={this.props.link}
                             target="_black"
+                            rel="noopener noreferrer"
                             type="button"
                             className="btn btn-secondary">
                                 Learn More
-                        </button>
+                        </a>
                         <button
                             onCLick={this.handleSaveButton}
                             type="button"
                             className="btn btn-secondary">
-                                {this.state.changeText}
+                                {this.state.text}
                         </button>
 
                     </div>

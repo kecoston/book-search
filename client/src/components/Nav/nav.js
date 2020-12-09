@@ -5,11 +5,12 @@ import "./nav.css";
 function Nav () {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
-      <a className="navbar-brand" href="/">
+      <a className="navbar-brand" href="/saved">
         SAVED BOOKS
       </a>
       <a className="navbar-brand" href="/">
         SEARCH FOR NEW
+        <span className="sr-only">(current)</span>
     </a>
     </nav>
   );
